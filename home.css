@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+  }
+  .logo span {
+    background-color: #f97316;
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+  .nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f97316;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  .nav-links a:hover {
+    color: #f97316;
+  }
+  .login-button {
+    background-color: #f97316;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .login-button:hover {
+    background-color: #ea580c;
+    transform: scale(1.05);
+  }

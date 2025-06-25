@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link href="footer.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    <link href="model.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&family=Lora:wght@400;700&display=swap');
+            
+            body {
+                font-family: 'Playfair Display', serif;
+                margin: 0;
+                line-height: 1.6;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+        
+            .faq-container {
+              margin-top: 70px;
+                width: 80%;
+
+                padding: 20px;
+            }
+            .faq-item {
+                border-bottom: 1px solid #ddd;
+                padding: 10px 0;
+            }
+            .faq-question {
+                font-family: 'Playfair Display', serif;
+                width: 100%;
+                text-align: left;
+                background: none;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                padding: 10px;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .faq-question i {
+                margin-right: 10px;
+            }
+            .faq-question .fa-chevron-down {
+                margin-left: auto;
+            }
+            .faq-answer {
+                font-family: 'Playfair Display', serif;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+                padding: 0 10px;
+                font-size: 16px;
+                color: #555;
+                display: flex;
+                align-items: center;
+            }
+            .faq-item.active .faq-answer {
+                max-height: 100px;
+                padding: 10px 10px;
+            }
+            .ask-question {
+                margin-top: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+            }
+            .ask-question input {
+                width: 100%;
+                padding: 8px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+            }
+            .ask-question button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 8px 12px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-left: 10px;
+            }
+    </style>
+</head>
+<body>
+  <nav  style="font-family: 'poppins',serif;">
+    <div class="logo">
+      <img src="k.png" alt="KALM AI Logo">
+      <span class="logo-box" style="font-family: 'poppins', serif;">Kalm</span>
+      <span class="logo-text">Studio</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html"><i class="fas fa-home"></i> Home</a>
+      
+      <div class="dropdown">
+        <a href="#feature" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+        <div class="dropdown-content" style=" width: 400px;">
+          <a href="backremove.html"><i class="fas fa-eraser"></i> Background Remover</a>
+          <a href="textbehing.html"><i class="fas fa-font"></i> Text Behind Image</a>
+          <a href="imaget.html"><i class="fas fa-paint-brush"></i> Image to Sketch</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#feature" class="dropbtn"><i class="fas fa-building"></i> Company</a>
+        <div class="dropdown-content">
+          <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="#feature2"><i class="fas fa-envelope"></i> Contact Us</a>
+          <a href="faq.html"><i class="fas fa-question-circle"></i> FAQs</a>
+        </div>
+      </div>
+      <button class="login-button"style="font-family: 'poppins', serif;" onclick="openModal()"><i class="fas fa-sign-in-alt"></i> Log in</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+  <div id="loginModal" class="modal" onclick="closeModal()">
+    <iframe src="login.html" style="display: none;" onclick="event.stopPropagation();"></iframe>
+</div>
+    <div class="faq-container">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> Why should we book your tour packages? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">We offer the best deals with excellent service and customer satisfaction.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> Are you a legitimate tour operator? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">Yes, we are a licensed and registered travel agency.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> How do we contact you? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">You can contact us via email or phone.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> What kind of vehicles do you use? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">The vehicles used by us are fully air-conditioned with comfort features.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> How do we get to know about your holiday packages, events and peak times? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">You can check our website or subscribe to our newsletter for updates.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> What does a Group Tour mean? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">A group tour is a planned itinerary for a group of travelers with shared experiences.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> Do you arrange attraction entries and accommodation? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">Yes, we arrange attraction tickets and accommodation as part of our packages.</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question"><i class="fa-regular fa-circle-question"></i> How can we book the tour packages? Is there any list available? <i class="fa-solid fa-chevron-down"></i></button>
+            <p class="faq-answer">You can book online through our website or contact us for a detailed list.</p>
+        </div>
+        <div class="ask-question">
+            <input type="text" placeholder="Ask your question here...">
+            <button>Submit</button>
+        </div>
+    </div>
+    <div class="header" style=" font-family: 'Playfair Display', serif;">
+        <h1>Get Started</h1>
+        <p><span class="highlight">Upload</span> your image and <span class="highlight">make text behind objects</span></p>
+        <button class="btn">🚀 Get Started</button>
+      </div>
+    
+      <footer id="foot"  style=" font-family: 'Playfair Display', serif;">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Text Behind Image</h3>
+            <p>Enhance your images with our Text Behind Image solutions. Experience the power of seamlessly integrating text behind objects in your images for a sophisticated look. Try our innovative tools now!</p>
+          </div>
+          <div class="footer-section">
+            <h3>Our Products</h3>
+            <p>Text Behind Image</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us on</h3>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>us English | 中文 | 日本語 | العربية | Español | Русский | हिन्दी</p>
+          <p>©2025 text behind image. All rights reserved.</p>
+        </div>
+      </footer>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        window.onload = function() {
+    closeModal();
+    setupCarousel();
+};
+
+function openModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        const iframe = modal.querySelector('iframe');
+        modal.style.display = 'flex';
+        modal.style.zIndex = '1000'; // Ensure it appears in front
+        if (iframe) iframe.style.display = 'block';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        const iframe = modal.querySelector('iframe');
+        modal.style.display = 'none';
+        if (iframe) iframe.style.display = 'none';
+    }
+}
+    </script>
+</body>
+</html>

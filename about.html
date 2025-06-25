@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalm Holidays - About Us</title>
+    <link href="footer.css" rel="stylesheet">
+    <link href="model.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      
+    <link href="footer.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&family=Lora:wght@400;700&display=swap');
+        
+        body {
+            
+            margin: 0;
+            padding: 0;
+           
+          
+        }
+        .container {
+            margin-top: 60px;
+            width: 80%;
+           
+            padding: 20px;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color:  #f97316;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            font-family: 'Lora', serif;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .images img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .images img:hover{
+            transform: scale(1.02);
+        }
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            justify-content: center;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap:40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 20px;;
+        }
+        .stat-card {
+            width: 200px;
+            height: 150px;
+            border: 5px solid #FFC107;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.0em;
+            font-weight: bold;
+            position: relative;
+            transition: transform 0.5s ;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .stat-card:hover {
+            transform: rotateY(180deg);
+            width: 200px;
+            height: 150px;
+        }
+        .stat-card .front, .stat-card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-card .back {
+            background: black;
+            border: 6px solid #FFC107;
+            color: white;
+            transform: rotateY(180deg);
+           
+        }
+    </style>
+</head>
+
+<body>  
+    <nav style="font-family: 'poppins',serif;">
+    <div class="logo">
+      <img src="k.png" alt="KALM AI Logo">
+      <span class="logo-box" style="font-family: 'poppins', serif;">Kalm</span>
+      <span class="logo-text">Studio</span>
+    </div>
+    <div class="nav-links">
+      <a href="home.html"><i class="fas fa-home"></i> Home</a>
+      
+      <div class="dropdown">
+        <a href="#feature" class="dropbtn"><i class="fas fa-tools"></i> Tools</a>
+        <div class="dropdown-content" style=" width: 400px;">
+          <a href="backremove.html"><i class="fas fa-eraser"></i> Background Remover</a>
+          <a href="textbehing.html"><i class="fas fa-font"></i> Text Behind Image</a>
+          <a href="imaget.html"><i class="fas fa-paint-brush"></i> Image to Sketch</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <a href="#feature" class="dropbtn"><i class="fas fa-building"></i> Company</a>
+        <div class="dropdown-content">
+          <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="#feature2"><i class="fas fa-envelope"></i> Contact Us</a>
+          <a href="faq.html"><i class="fas fa-question-circle"></i> FAQs</a>
+        </div>
+      </div>
+      <button class="login-button" style="font-family: 'poppins', serif;" onclick="openModal()"><i class="fas fa-sign-in-alt" ></i> Log in</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+      <div id="loginModal" class="modal" onclick="closeModal()">
+        <iframe src="login.html" style="display: none;" onclick="event.stopPropagation();"></iframe>
+    </div>
+      <div class="container">
+        <h2>Our Story</h2>
+        <p>Welcome to <strong>Kalm Studio</strong>, where creativity meets AI. We specialize in building intelligent tools that enhance your images, automate editing, and bring your artistic visions to life.</p>
+        <p>From seamless background removal to advanced text-behind effects, sketch filters, and beyond, our AI-driven platform ensures professional-grade results in just a few clicks.</p>
+    
+        <div class="images">
+            <img src="maxresdefault (1).jpg" alt="Background Removal">
+            <img src="1.webp" alt="Text Behind Image">
+        </div>
+    
+        <div class="mission-vision">
+            <div class="section">
+                <h2>Our Mission</h2>
+                <p>At <strong>Kalm Studio</strong>, we aim to revolutionize digital creativity by providing AI-powered tools that simplify complex editing tasks and inspire innovation.</p>
+            </div>
+            <div class="section">
+                <h2>Our Vision</h2>
+                <p>Our vision is to become a leading AI creative hub, empowering designers, artists, and businesses to achieve extraordinary results effortlessly.</p>
+            </div>
+        </div>
+    
+        <hr>
+    
+        <div class="stats" style="font-family: 'Poppins', serif;">
+            <div class="stat-card">
+                <div class="front">
+                    <span>10k+</span>
+                    <p>Backgrounds Removed</p>
+                </div>
+                <div class="back">Our AI has successfully processed over 10,000 background removals, delivering clean and professional images.</div>
+            </div>
+            <div class="stat-card">
+                <div class="front">
+                    <span>5k+</span>
+                    <p>Text-Behind Effects</p>
+                </div>
+                <div class="back">Transforming text into seamless overlays with 5000+ creative text-behind-image edits.</div>
+            </div>
+            <div class="stat-card">
+                <div class="front">
+                    <span>7k+</span>
+                    <p>Sketch Art Conversions</p>
+                </div>
+                <div class="back">Converting images into stunning AI-generated sketches for artists and designers worldwide.</div>
+            </div>
+            <div class="stat-card">
+                <div class="front">
+                    <span>15k+</span>
+                    <p>AI Enhancements</p>
+                </div>
+                <div class="back">From filters to artistic transformations, our AI tools have enhanced over 15,000 visuals.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="header" style=" font-family: 'Playfair Display', serif;">
+        <h1>Get Started</h1>
+        <p><span class="highlight">Upload</span> your image and <span class="highlight">make text behind objects</span></p>
+        <button class="btn">🚀 Get Started</button>
+      </div>
+    
+      <footer id="foot"  style=" font-family: 'Playfair Display', serif;">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>Text Behind Image</h3>
+            <p>Enhance your images with our Text Behind Image solutions. Experience the power of seamlessly integrating text behind objects in your images for a sophisticated look. Try our innovative tools now!</p>
+          </div>
+          <div class="footer-section">
+            <h3>Our Products</h3>
+            <p>Text Behind Image</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us on</h3>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>us English | 中文 | 日本語 | العربية | Español | Русский | हिन्दी</p>
+          <p>©2025 text behind image. All rights reserved.</p>
+        </div>
+      </footer>
+   <script>
+ window.onload = function() {
+    closeModal();
+    setupCarousel();
+};
+
+function openModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        const iframe = modal.querySelector('iframe');
+        modal.style.display = 'flex';
+        modal.style.zIndex = '1000'; // Ensure it appears in front
+        if (iframe) iframe.style.display = 'block';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('loginModal');
+    if (modal) {
+        const iframe = modal.querySelector('iframe');
+        modal.style.display = 'none';
+        if (iframe) iframe.style.display = 'none';
+    }
+}
+</script>
+</body>
+</html>
